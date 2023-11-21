@@ -12,7 +12,7 @@ def create_note(note: BaseNote):
 def append_note(note: BaseNote):
     note_path = os.path.join(VAULT_PATH, str(note.title + '.md'))
     with open(note_path, "a+") as note_file:
-        note_file.write(note.text)
+        note_file.write(note.text + "\n")
 
 def read_note(note: ReadNote):
     note_path = os.path.join(VAULT_PATH, str(note.title + '.md'))
